@@ -84,3 +84,12 @@ pong.addEventListener('click', showPong);
 statesQuiz.addEventListener('click', showStatesQuiz);
 snake.addEventListener('click', showSnake);
 modals.addEventListener('click', showModal);
+
+
+const projectNav = document.querySelector(".projectNav");
+const projects = document.querySelector(".projects")
+const scrollToProjects = function() {
+    projects.scrollIntoView({behavior: "smooth"});
+}
+
+projectNav.addEventListener("click", scrollToProjects);

@@ -11,7 +11,7 @@
 <body></body>
     
     <nav class="hidden sm:flex justify-end mx-36 my-3 space-x-10">
-        <p class="text-white font-inter font-light text-base hover:opacity-50 cursor-pointer">Projects</p>
+        <button class="projectNav"><p class="text-white font-inter font-light text-base hover:opacity-50 cursor-pointer projectNav">Projects</p></button>
         <p class="text-white font-inter font-light text-base hover:opacity-50 cursor-pointer">Resume</p>
         <p class="text-white font-inter font-light text-base hover:opacity-50 cursor-pointer">Contact</p>
     </nav>
@@ -54,34 +54,34 @@
         </div> 
     </div>
 
-    <div class="mx-16 mt-32 flex flex-col sm:mt-52 xl:mx-36 2xl:mx-64 2xl:mt-72">
+    <div class="mx-12 sm:mx-16 mt-32 flex flex-col sm:mt-52 xl:mx-36 2xl:mx-64 2xl:mt-72">
         
         <p class="text-lg text-gray-400 font-inter font-light">Projects</p>
         <div class="flex flex-col sm:flex-row">
             
-            <div class="mt-6 flex sm:flex-col">
-                <button class="flex text-white font-inter w-[150px] justify-start border-l border-solid border-white h-[60px] items-center guessANumber text-left projectbtn hover:border-l-white">
+            <div class="mt-6 flex flex-wrap justify-center items-center sm:justify-start sm:items-start sm:flex-col max-w-[100%]">
+                <button class="flex text-white font-inter sm:w-[150px] justify-start border-l border-solid border-white h-[60px] items-center guessANumber text-left projectbtn hover:border-l-white">
                     <p class="mx-4">Guess a Number</p>
                 </button>
-                <button class="flex text-white font-inter w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center hover:border-l-white portfolio projectbtn opacity-50">
+                <button class="flex text-white font-inter sm:w-[150px]  justify-start border-l border-solid border-gray-900 h-[60px] items-center hover:border-l-white portfolio projectbtn opacity-50">
                     <p class="mx-4">Portfolio</p>
                 </button>
-                <button class="flex text-white font-inter w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center pong opacity-50 projectbtn hover:border-l-white">
+                <button class="flex text-white font-inter sm:w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center pong opacity-50 projectbtn hover:border-l-white">
                     <p class="mx-4">Pong</p>
                 </button>
-                <button class="flex text-white font-inter w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center statesQuiz opacity-50 projectbtn hover:border-l-white">
+                <button class="flex text-white font-inter sm:w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center statesQuiz opacity-50 projectbtn hover:border-l-white">
                     <p class="mx-4">States Quiz</p>
                 </button>
-                <button class="flex text-white font-inter w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center snake opacity-50 projectbtn hover:border-l-white">
+                <button class="flex text-white font-inter sm:w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center snake opacity-50 projectbtn hover:border-l-white">
                     <p class="mx-4">Snake</p>
                 </button>
-                <button class="flex text-white font-inter w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center modals opacity-50 projectbtn hover:border-l-white">
+                <button class="flex text-white font-inter sm:w-[150px] justify-start border-l border-solid border-gray-900 h-[60px] items-center modals opacity-50 projectbtn hover:border-l-white">
                     <p class="mx-4">Modals</p>
                 </button>
 
             </div>
 
-            <div class="flex experience flex-col mx-12 mt-8 xl:mx-auto 2xl:mx-auto text-center items-center">
+            <div class="flex projects flex-col mx-12 mt-8 xl:mx-auto 2xl:mx-auto text-center items-center">
                 <img src="gif/guess.gif" alt="" class="laptopImg">
                 <h1 class="text-2xl text-white font-inter font-light title mt-5 projectTitle">Guess a Number</h1>
                 <h2 class="text-base text-blue-400 font-inter font-light mt-4 location projectTech">Tech: Html, Css, Tailwindcss, Javacript</h2>

@@ -588,6 +588,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-52 {
   margin-top: 13rem;
 }
@@ -598,10 +602,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .inline-block {
@@ -620,10 +620,6 @@ video {
   height: 0.25rem;
 }
 
-.h-\[225px\] {
-  height: 225px;
-}
-
 .h-\[60px\] {
   height: 60px;
 }
@@ -640,16 +636,60 @@ video {
   width: 150px;
 }
 
-.w-\[350px\] {
-  width: 350px;
-}
-
 .w-full {
   width: 100%;
 }
 
-.max-w-\[375px\] {
-  max-width: 375px;
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[10px\] {
+  width: 10px;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[2rem\] {
+  width: 2rem;
+}
+
+.w-\[20px\] {
+  width: 20px;
+}
+
+.max-w-screen-sm {
+  max-width: 640px;
+}
+
+.max-w-\[100\%\] {
+  max-width: 100%;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .cursor-pointer {
@@ -662,6 +702,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -678,10 +722,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .space-x-10 > :not([hidden]) ~ :not([hidden]) {
@@ -787,11 +827,6 @@ video {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -809,11 +844,6 @@ video {
 
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -893,6 +923,11 @@ body{
     margin-right: 0.5rem;
   }
 
+  .sm\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
   .sm\:mt-52 {
     margin-top: 13rem;
   }
@@ -901,12 +936,28 @@ body{
     display: flex;
   }
 
+  .sm\:h-\[60px\] {
+    height: 60px;
+  }
+
+  .sm\:w-\[150px\] {
+    width: 150px;
+  }
+
+  .sm\:w-\[100px\] {
+    width: 100px;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
 
   .sm\:flex-col {
     flex-direction: column;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
   }
 
   .sm\:justify-start {
@@ -938,24 +989,9 @@ body{
 }
 
 @media (min-width: 1280px) {
-  .xl\:mx-32 {
-    margin-left: 8rem;
-    margin-right: 8rem;
-  }
-
   .xl\:mx-36 {
     margin-left: 9rem;
     margin-right: 9rem;
-  }
-
-  .xl\:mx-44 {
-    margin-left: 11rem;
-    margin-right: 11rem;
-  }
-
-  .xl\:mx-56 {
-    margin-left: 14rem;
-    margin-right: 14rem;
   }
 
   .xl\:mx-auto {
@@ -965,11 +1001,6 @@ body{
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:mx-56 {
-    margin-left: 14rem;
-    margin-right: 14rem;
-  }
-
   .\32xl\:mx-64 {
     margin-left: 16rem;
     margin-right: 16rem;
@@ -978,11 +1009,6 @@ body{
   .\32xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .\32xl\:mx-96 {
-    margin-left: 24rem;
-    margin-right: 24rem;
   }
 
   .\32xl\:mt-72 {
@@ -995,10 +1021,6 @@ body{
 
   .\32xl\:max-w-\[1050px\] {
     max-width: 1050px;
-  }
-
-  .\32xl\:justify-evenly {
-    justify-content: space-evenly;
   }
 
   .\32xl\:space-x-72 > :not([hidden]) ~ :not([hidden]) {
