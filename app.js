@@ -1,79 +1,17 @@
-const mintButton = document.querySelector('.mint')
-const globeButton = document.querySelector('.globe')
-const chipotleButton = document.querySelector('.chipotle')
-const title = document.querySelector('.title');
-const subtitle = document.querySelector('.location');
-const notes = document.querySelector('.notes');
+const laptopImg = document.querySelector('.laptopImg');
+const projectTitle = document.querySelector('.projectTitle');
+const projectTech = document.querySelector('.projectTech');
+const projectLink = document.querySelector('.projectLink');
 
-globeButton.addEventListener("click", showGlobe);
-mintButton.addEventListener("click", showMint);
-chipotleButton.addEventListener("click", showChipotle);
+const portfolio = document.querySelector('.portfolio');
+const guessANumber = document.querySelector('.guessANumber');
+const pong = document.querySelector('.pong');
+const statesQuiz = document.querySelector('.statesQuiz');
+const snake = document.querySelector('.snake');
+const passwordGenerator = document.querySelector('.passwordGenerator');
+const modals = document.querySelector('.modals');
+const projectBtn = document.querySelectorAll('.projectbtn');
 
-function showGlobe(){
-    title.style.opacity = 0;
-    subtitle.style.opacity = 0
-    notes.style.opacity = 0
-
-    title.innerHTML = "Globe Life Liberty National"
-    subtitle.innerHTML = "Richmond, Virginia"
-    notes.innerHTML = "- Tbh I hated this Job<br>- I made $1000 my first week and learned sales"
-        
-    fadeIn(title,1000);
-    fadeIn(subtitle, 1000);
-    fadeIn(notes, 1000)
-
-    mintButton.style.opacity = "50%"
-    globeButton.style.opacity = "100%"
-    chipotleButton.style.opacity = "50%"
-
-    mintButton.style.borderLeftColor = "#111827";
-    globeButton.style.borderLeftColor = "white";
-    chipotleButton.style.borderLeftColor = "#111827";
-}
-
-function showMint(){
-    title.style.opacity = 0;
-    subtitle.style.opacity = 0
-    notes.style.opacity = 0
-
-    title.innerHTML = "Mint Detail"
-    subtitle.innerHTML = "LA, California"
-    notes.innerHTML = "This job is a WIP."
-        
-    fadeIn(title,1000);
-    fadeIn(subtitle, 1000);
-    fadeIn(notes, 1000)
-
-    mintButton.style.opacity = "100%"
-    globeButton.style.opacity = "50%"
-    chipotleButton.style.opacity = "50%"
-
-    mintButton.style.borderLeftColor = "white";
-    globeButton.style.borderLeftColor = "#111827";
-    chipotleButton.style.borderLeftColor = "#111827";
-}
-
-function showChipotle(){
-    title.style.opacity = 0;
-    subtitle.style.opacity = 0
-    notes.style.opacity = 0
-
-    title.innerHTML = "Chipotle"
-    subtitle.innerHTML = "Richmond, Virginia"
-    notes.innerHTML = "- Learned customer service.<br>- Worked the line"
-    
-    fadeIn(title,1000);
-    fadeIn(subtitle, 1000);
-    fadeIn(notes, 1000)
-
-    mintButton.style.opacity = "50%"
-    globeButton.style.opacity = "50%"
-    chipotleButton.style.opacity = "100%"
-
-    mintButton.style.borderLeftColor = "#111827";
-    globeButton.style.borderLeftColor = "#111827";
-    chipotleButton.style.borderLeftColor = "white";
-}
 
 function fadeIn(element, duration){
     let opacity = 0;
@@ -90,3 +28,59 @@ function fadeIn(element, duration){
     }
     fade();
 }
+
+const changeProject = function(img, title, tech, link) {
+    laptopImg.src = img;
+    projectTitle.innerHTML = title;
+    projectTech.innerHTML = tech;
+    projectLink.setAttribute("href", link);
+}
+const buttonStyling = function(name){
+    for (let btn of projectBtn){
+       if (btn.classList.contains(name)){
+            btn.classList.add("border-white");
+            btn.classList.remove("border-gray-900");
+            btn.classList.remove("opacity-50");
+       }
+       else{
+            btn.classList.add("border-gray-900")
+            btn.classList.remove("border-white")
+            btn.classList.add("opacity-50")
+       }
+    }
+    
+}
+
+
+const showGuessANumber = function(){
+    changeProject("./gif/guess.gif", "Guess a Number", "Tech: HTML, CSS, Javascript, Tailwindcss", "https://github.com/haroon6268/Number-Guessing-Game")
+    buttonStyling("guessANumber")
+}
+const showPortfolio = function(){
+    changeProject("portfolio.png", "My Portfolio", "Tech: HTML, CSS, Javacript, Tailwindcss", "https://github.com/haroon6268/Portfolio");
+    buttonStyling("portfolio");
+}
+const showPong = function(){
+    changeProject("./gif/pong.gif", "Pong", "Tech: Python", "https://github.com/haroon6268/Pong");
+    buttonStyling("pong")
+}
+const showStatesQuiz = function() {
+    changeProject("./gif/statesquiz.gif", "US States Quiz", "Tech: Python", "https://github.com/haroon6268/US-States-Quiz");
+    buttonStyling("statesQuiz")
+}
+const showSnake = function() {
+    changeProject("./gif/snake.gif", "Snake Game", "Tech: Python", "https://github.com/haroon6268/Snake");
+    buttonStyling("snake")
+}
+const showModal = function() {
+    changeProject("./gif/modals.gif", "Modals", "Tech: HTML, CSS, Javascript","https://github.com/haroon6268/modals");
+    buttonStyling("modals");
+}
+
+
+guessANumber.addEventListener('click', showGuessANumber);
+portfolio.addEventListener('click', showPortfolio);
+pong.addEventListener('click', showPong);
+statesQuiz.addEventListener('click', showStatesQuiz);
+snake.addEventListener('click', showSnake);
+modals.addEventListener('click', showModal);
