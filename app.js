@@ -78,6 +78,7 @@ const showModal = function() {
 }
 const showPig = function(){
     changeProject("./gif/pig.gif", "Pig Game", "Tech: HTML, CSS, Javascript", "https://github.com/haroon6268/pig-game");
+    buttonStyling("pig");
 }
 
 
@@ -106,3 +107,14 @@ const scrollToSideProj = function() {
 }
 
 sideProjNav.addEventListener('click', scrollToSideProj);
+
+const contact = document.querySelectorAll('.contact');
+const contactForm = document.querySelector('.contactForm');
+const scrollToContact = function() {
+    contactForm.scrollIntoView({behavior: "smooth"});
+
+}
+
+for(let x of contact){
+    x.addEventListener('click', scrollToContact);
+}
