@@ -11,7 +11,7 @@ const snake = document.querySelector('.snake');
 const passwordGenerator = document.querySelector('.passwordGenerator');
 const modals = document.querySelector('.modals');
 const projectBtn = document.querySelectorAll('.projectbtn');
-
+const pig = document.querySelector('.pig');
 
 function fadeIn(element, duration){
     let opacity = 0;
@@ -76,6 +76,9 @@ const showModal = function() {
     changeProject("./gif/modals.gif", "Modals", "Tech: HTML, CSS, Javascript","https://github.com/haroon6268/modals");
     buttonStyling("modals");
 }
+const showPig = function(){
+    changeProject("./gif/pig.gif", "Pig Game", "Tech: HTML, CSS, Javascript", "https://github.com/haroon6268/pig-game");
+}
 
 
 guessANumber.addEventListener('click', showGuessANumber);
@@ -84,6 +87,7 @@ pong.addEventListener('click', showPong);
 statesQuiz.addEventListener('click', showStatesQuiz);
 snake.addEventListener('click', showSnake);
 modals.addEventListener('click', showModal);
+pig.addEventListener('click', showPig);
 
 
 const projectNav = document.querySelector(".projectNav");
@@ -93,3 +97,12 @@ const scrollToProjects = function() {
 }
 
 projectNav.addEventListener("click", scrollToProjects);
+
+const sideProjNav = document.querySelector('.sideProjNav');
+const sideProj = document.querySelector('.sideProj');
+
+const scrollToSideProj = function() {
+    sideProj.scrollIntoView({behavior : "smooth"});
+}
+
+sideProjNav.addEventListener('click', scrollToSideProj);
